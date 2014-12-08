@@ -21,11 +21,24 @@ public void setup()
 }  
 public void draw()  
 {   
-	//not needed for this assignment
+	for(int i=2;i<e.length()-10;i++){
+		String digits= e.substring(i,i+10);
+		double deNum = Double.parseDouble(digits);
+		//System.out.println(deNum);
+		if(isPrime(deNum)==true){
+			System.out.println(deNum);
+		}	
+	}
+	
+
 }  
 public boolean isPrime(double dNum)  
 {   
-    //to be finished later   
+    for (int i=2;i<Math.sqrt(dNum);i++){
+    	if(dNum%i==0){
+    		return false;
+    	}
+    }
     return true;  
 } 
   static public void main(String[] passedArgs) {
